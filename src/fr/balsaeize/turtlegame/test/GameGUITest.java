@@ -12,7 +12,7 @@ public class GameGUITest {
 
 	public GameGUITest()
 	{
-		new GameGUI();
+		new GameGUI(null);
 	}
 	
 }

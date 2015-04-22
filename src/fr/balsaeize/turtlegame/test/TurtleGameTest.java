@@ -1,6 +1,8 @@
 package fr.balsaeize.turtlegame.test;
 
 
+
+
 /**
  * Classe principale des testes
  * 
@@ -10,9 +12,10 @@ package fr.balsaeize.turtlegame.test;
 public class TurtleGameTest {
 
 	public static void main(String[] args)
-	{
+	{		
+		
 		//new PlayerTest();
-		//new GameGUITest();
+		new GameGUITest();
 		/*System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, true));
 		System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, true).getColorCode());
 		System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, false));

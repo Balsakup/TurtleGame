@@ -7,6 +7,17 @@ package fr.balsaeize.turtlegame;
  * @version 1.0.0
  */
 public class TurtleGame {
+	
+	/** Nom du système d'exploitation **/
+	public static String osName;
+	
+	/**
+	 * Constructeur du jeu
+	 */
+	public TurtleGame()
+	{
+		osName = System.getProperty("os.name");
+	}
 
 	/**
 	 * Méthode principale du jeu
@@ -14,7 +25,7 @@ public class TurtleGame {
 	 * @param args Arguments passés en paramètre à l'exécution du jeu
 	 */
 	public static void main(String[] args)
-	{
+	{		
 		
 	}
 

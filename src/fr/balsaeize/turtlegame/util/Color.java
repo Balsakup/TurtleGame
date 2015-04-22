@@ -74,7 +74,7 @@ public class Color {
 	 * @param bright Clarité du texte
 	 */
 	public Color(ColorCode background, ColorCode foreground, boolean bright)
-	{
+	{		
 		this.background = background;
 		this.foreground = foreground;
 		this.bright     = bright;
@@ -126,7 +126,7 @@ public class Color {
 	 * 
 	 * @return Code de 'reset'
 	 */
-	public String reset()
+	public static String reset()
 	{
 		return "\u001B[0m";
 	}
