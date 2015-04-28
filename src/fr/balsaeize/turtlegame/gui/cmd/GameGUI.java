@@ -31,6 +31,8 @@ public class GameGUI implements InterfaceGUI {
 		while (sc.hasNext())
 			System.out.println(sc.next());
 		
+		sc.close();
+		
 		System.out.println();
 	}
 
@@ -72,7 +74,7 @@ public class GameGUI implements InterfaceGUI {
 		   .append(new Color(ColorCode.BLUE, false).getColorCode() + "[->->]" + Color.reset() + "(4)  ")
 		   .append(new Color(ColorCode.WHITE, false).getColorCode() + "[--]" + Color.reset() + "(5)  ")
 		   .append("\n\n")
-		   .append("  >>  " + new Color(ColorCode.GREEN, false).getColorCode() + "Quelle carte voulez-vous jouer ? (Entrez le numéro de la carte) " + Color.reset());
+		   .append("  >>  " + new Color(ColorCode.GREEN, false).getColorCode() + "Quelle carte voulez-vous jouer ? (Entrez le numï¿½ro de la carte) " + Color.reset());
 	}
 	
 	public void render()
