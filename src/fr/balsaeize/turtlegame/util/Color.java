@@ -1,9 +1,9 @@
 package fr.balsaeize.turtlegame.util;
 
 /**
- * Classe permettant de gérer la couleur dans le terminal
+ * Classe permettant de gï¿½rer la couleur dans le terminal
  * La console Windows ne prennant pas en compte les code ANSI,
- * cette classe n'est fonctionnel que pour Unix ou les terminaux émulant Unix
+ * cette classe n'est fonctionnel que pour Unix ou les terminaux ï¿½mulant Unix
  * 
  * @author Quentin CATHERINE et Axel ELAIN
  * @version 1.0.0
@@ -11,7 +11,7 @@ package fr.balsaeize.turtlegame.util;
 public class Color {
 	
 	/**
-	 * Enumération permettant de lister les différents couleurs utilisable
+	 * Enumï¿½ration permettant de lister les diffï¿½rents couleurs utilisable
 	 * 
 	 * @author Quentin CATHERINE et Axel ELAIN
      * @version 1.0.0
@@ -31,7 +31,7 @@ public class Color {
 		private final int code;
 		
 		/**
-		 * Permet de créer les énumération de couleur
+		 * Permet de crï¿½er les ï¿½numï¿½ration de couleur
 		 * 
 		 * @param code Code de la couleur (0 pour noire, 1 pour rouge, etc...)
 		 */
@@ -41,7 +41,7 @@ public class Color {
 		}
 		
 		/**
-		 * Permet de récupérer le code de la couleur sous forme d'un entier
+		 * Permet de rï¿½cupï¿½rer le code de la couleur sous forme d'un entier
 		 * 
 		 * @return Code couleur
 		 */
@@ -49,7 +49,6 @@ public class Color {
 		{
 			return code;
 		}
-		
 		
 		@Override
 		public String toString()
@@ -63,15 +62,15 @@ public class Color {
 	private ColorCode background;
 	/** Code couleur du texte **/
 	private ColorCode foreground;
-	/** Clarité du texte **/
+	/** Claritï¿½ du texte **/
 	private boolean bright;
 	
 	/**
-	 * Permet d'instancier une couleur contenant une couleur de fond, une couleur et une clairité de couleur
+	 * Permet d'instancier une couleur contenant une couleur de fond, une couleur et une clairitï¿½ de couleur
 	 * 
 	 * @param background Code couleur du fond
 	 * @param foreground COde couleur du texte
-	 * @param bright Clarité du texte
+	 * @param bright Claritï¿½ du texte
 	 */
 	public Color(ColorCode background, ColorCode foreground, boolean bright)
 	{		
@@ -91,10 +90,10 @@ public class Color {
 	}
 	
 	/**
-	 * Permet d'instancier une couleur contenant une couleur et une clairité de couleur
+	 * Permet d'instancier une couleur contenant une couleur et une clairitï¿½ de couleur
 	 * 
 	 * @param foreground COde couleur du texte
-	 * @param bright Clarité du texte
+	 * @param bright Claritï¿½ du texte
 	 */
 	public Color(ColorCode foreground, boolean bright)
 	{
@@ -122,7 +121,7 @@ public class Color {
 	}
 	
 	/**
-	 * Permet de rétablir les paramètres par défaut
+	 * Permet de rï¿½tablir les paramï¿½tres par dï¿½faut
 	 * 
 	 * @return Code de 'reset'
 	 */
@@ -146,7 +145,7 @@ public class Color {
 	}
 
 	/**
-	 * Permet de récupérer le code couleur du fond
+	 * Permet de rï¿½cupï¿½rer le code couleur du fond
 	 * 
 	 * @return Code couleur du fond
 	 */
@@ -166,7 +165,7 @@ public class Color {
 	}
 
 	/**
-	 * Permet de récupérer le code couleur du texte
+	 * Permet de rï¿½cupï¿½rer le code couleur du texte
 	 * 
 	 * @return Code couleur du texte
 	 */
@@ -188,7 +187,7 @@ public class Color {
 	/**
 	 * Permet de savoir sur la couleur du texte est clare ou non
 	 * 
-	 * @return Clarité du texte
+	 * @return Claritï¿½ du texte
 	 */
 	public boolean isBright()
 	{
@@ -196,9 +195,9 @@ public class Color {
 	}
 
 	/**
-	 * Permet de changer la clarité du texte
+	 * Permet de changer la claritï¿½ du texte
 	 * 
-	 * @param bright Nouvelle clarité du texte
+	 * @param bright Nouvelle claritï¿½ du texte
 	 */
 	public void setBright(boolean bright)
 	{

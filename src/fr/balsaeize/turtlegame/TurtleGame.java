@@ -1,14 +1,14 @@
 package fr.balsaeize.turtlegame;
 
 /**
- * Classe principale du jeu, c'est ici que se trouve la méthode principale
+ * Classe principale du jeu, c'est ici que se trouve la mï¿½thode principale
  * 
  * @author Quentin CATHERINE et Axel ELAIN
  * @version 1.0.0
  */
 public class TurtleGame {
 	
-	/** Nom du système d'exploitation **/
+	/** Nom du systï¿½me d'exploitation **/
 	public static String osName;
 	
 	/**
@@ -20,13 +20,13 @@ public class TurtleGame {
 	}
 
 	/**
-	 * Méthode principale du jeu
+	 * Mï¿½thode principale du jeu
 	 * 
-	 * @param args Arguments passés en paramètre à l'exécution du jeu
+	 * @param args Arguments passï¿½s en paramï¿½tre ï¿½ l'exï¿½cution du jeu
 	 */
 	public static void main(String[] args)
 	{		
-		
+		/** TODO: Ajouter `equals` et `toString` **/
 	}
 
 }
