@@ -35,7 +35,7 @@ public class Executor {
 		 * @param cmdUnix La commande au format Unix
 		 */
 		private Command(String cmdWin, String cmdUnix)
-		{
+		{			
 			this.cmdWin  = cmdWin;
 			this.cmdUnix = cmdUnix;
 		}
@@ -77,12 +77,12 @@ public class Executor {
 	 */
 	public static boolean executeCommand(Command cmd)
 	{
+		Process p = null; // Processus exécuté lors de l'exécution de la commande
+		
 		try
-		{
-			Process p = null; // Processus exécuté lors de l'exécution de la commande
-			
+		{			
 			if (TurtleGame.osName.contains("win")) // Si on est sous Windows
-				p = Runtime.getRuntime().exec(cmd.getCmdWin()); // alors on exécute le commande de Windows
+				p = Runtime.getRuntime().exec("cmd /C " + cmd.getCmdWin()); // alors on exécute le commande de Windows
 			else
 				p = Runtime.getRuntime().exec(cmd.getCmdUnix()); // Sinon, c'est celle pour Unix qui est exécutée
 			

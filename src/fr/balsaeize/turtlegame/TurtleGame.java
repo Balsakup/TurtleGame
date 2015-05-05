@@ -20,7 +20,7 @@ public class TurtleGame {
 	 */
 	public TurtleGame()
 	{
-		osName = System.getProperty("os.name");
+		osName = System.getProperty("os.name").toLowerCase();
 		
 		SplashGUI splash = new SplashGUI();
 		
@@ -34,7 +34,7 @@ public class TurtleGame {
 	 * @param args Arguments pass�s en param�tre � l'ex�cution du jeu
 	 */
 	public static void main(String[] args)
-	{		
+	{				
 		/** TODO: Ajouter `equals` et `toString` **/
 		
 		new TurtleGame();
