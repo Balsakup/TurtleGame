@@ -1,5 +1,9 @@
 package fr.balsaeize.turtlegame;
 
+import fr.balsaeize.turtlegame.gui.cmd.SplashGUI;
+import fr.balsaeize.turtlegame.util.Executor;
+import fr.balsaeize.turtlegame.util.Executor.Command;
+
 /**
  * Classe principale du jeu, c'est ici que se trouve la m�thode principale
  * 
@@ -17,6 +21,11 @@ public class TurtleGame {
 	public TurtleGame()
 	{
 		osName = System.getProperty("os.name");
+		
+		SplashGUI splash = new SplashGUI();
+		
+		splash.init();
+		splash.render();
 	}
 
 	/**
@@ -27,6 +36,10 @@ public class TurtleGame {
 	public static void main(String[] args)
 	{		
 		/** TODO: Ajouter `equals` et `toString` **/
+		
+		new TurtleGame();
+		
+		Executor.executeCommand(Command.CLEAR_CONSOLE);
 	}
 
 }

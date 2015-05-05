@@ -13,4 +13,9 @@ public interface InterfaceGUI {
 	 */
 	public void init();
 	
+	/**
+	 * Permet de faire le rendu graphique
+	 */
+	public void render();
+	
 }

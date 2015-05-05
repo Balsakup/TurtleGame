@@ -31,8 +31,6 @@ public class GameGUI implements InterfaceGUI {
 		while (sc.hasNext())
 			System.out.println(sc.next());
 		
-		sc.close();
-		
 		System.out.println();
 	}
 
@@ -77,6 +75,7 @@ public class GameGUI implements InterfaceGUI {
 		   .append("  >>  " + new Color(ColorCode.GREEN, false).getColorCode() + "Quelle carte voulez-vous jouer ? (Entrez le num�ro de la carte) " + Color.reset());
 	}
 	
+	@Override
 	public void render()
 	{
 		System.out.print(gui.toString());

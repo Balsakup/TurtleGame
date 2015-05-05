@@ -11,12 +11,12 @@ package fr.balsaeize.turtlegame.test;
  */
 public class TurtleGameTest {
 
-	public static void main(String[] args)
+	/*public static void main(String[] args)
 	{		
 		
 		//new PlayerTest();
 		new GameGUITest();
-		/*System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, true));
+		System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, true));
 		System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, true).getColorCode());
 		System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, false));
 		System.out.println(new Color(ColorCode.WHITE, ColorCode.BLACK, false).getColorCode());
@@ -25,7 +25,7 @@ public class TurtleGameTest {
 		System.out.println(new Color(ColorCode.YELLOW, false));
 		System.out.println(new Color(ColorCode.YELLOW, false).getColorCode());
 		System.out.println(new Color(ColorCode.MAGENTA));
-		System.out.println(new Color(ColorCode.MAGENTA).getColorCode());*/
-	}
+		System.out.println(new Color(ColorCode.MAGENTA).getColorCode());
+	}*/
 
 }
