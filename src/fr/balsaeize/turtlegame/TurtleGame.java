@@ -1,5 +1,6 @@
 package fr.balsaeize.turtlegame;
 
+import fr.balsaeize.turtlegame.gui.cmd.MenuGUI;
 import fr.balsaeize.turtlegame.gui.cmd.SplashGUI;
 import fr.balsaeize.turtlegame.util.Executor;
 import fr.balsaeize.turtlegame.util.Executor.Command;
@@ -26,6 +27,11 @@ public class TurtleGame {
 		
 		splash.init();
 		splash.render();
+		
+		MenuGUI menu = new MenuGUI();
+		
+		menu.init();
+		menu.render();
 	}
 
 	/**
