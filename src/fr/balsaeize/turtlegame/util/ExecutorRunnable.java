@@ -36,6 +36,8 @@ public class ExecutorRunnable implements Runnable {
 		{
 			while ((line = br.readLine()) != null) // Tant qu'il y a des résultats
 				System.out.print(line); // On affiche ces résultats (Ce que retourne la commande)
+			
+			br.close();
 		}
 		catch (IOException e)
 		{

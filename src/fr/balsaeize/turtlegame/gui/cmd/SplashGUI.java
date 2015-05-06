@@ -1,6 +1,9 @@
 package fr.balsaeize.turtlegame.gui.cmd;
 
 import fr.balsaeize.turtlegame.gui.InterfaceGUI;
+import fr.balsaeize.turtlegame.util.Executor;
+import fr.balsaeize.turtlegame.util.Executor.Command;
+import fr.balsaeize.turtlegame.util.Util;
 
 public class SplashGUI implements InterfaceGUI {
 
@@ -23,6 +26,10 @@ public class SplashGUI implements InterfaceGUI {
 	public void render()
 	{
 		System.out.println(logo.toString());
+		
+		Util.sleep(1);
+		
+		Executor.executeCommand(Command.CLEAR_CONSOLE);
 	}
 
 	public StringBuilder getLogo()

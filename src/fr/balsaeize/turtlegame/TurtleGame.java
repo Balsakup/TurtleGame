@@ -38,8 +38,6 @@ public class TurtleGame {
 		/** TODO: Ajouter `equals` et `toString` **/
 		
 		new TurtleGame();
-		
-		Executor.executeCommand(Command.CLEAR_CONSOLE);
 	}
 
 }
