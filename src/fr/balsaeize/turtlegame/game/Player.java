@@ -1,5 +1,7 @@
 package fr.balsaeize.turtlegame.game;
 
+import fr.balsaeize.turtlegame.game.card.Card;
+
 /**
  * Classe qui g�re les joueurs, elle permet de cr�er les joueurs
  * 
@@ -12,8 +14,8 @@ public class Player {
 	private String name;
 	/** Age du joueur **/
 	private int age;
-	/** Sa tortue **/
-	private Turtle turtle;
+	/** Sa tuille **/
+	private Card tile;
 	
 	/**
 	 * Permet de cr�er un nouveau joueur
@@ -67,14 +69,14 @@ public class Player {
 		this.age = age;
 	}
 
-	public Turtle getTurtle()
+	public Card getTile()
 	{
-		return turtle;
+		return tile;
 	}
 
-	public void setTurtle(Turtle turtle)
+	public void setTile(Card tile)
 	{
-		this.turtle = turtle;
+		this.tile = tile;
 	}
 	
 }

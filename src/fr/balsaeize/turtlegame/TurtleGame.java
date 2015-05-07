@@ -5,7 +5,7 @@ import java.util.List;
 
 import fr.balsaeize.turtlegame.game.Game;
 import fr.balsaeize.turtlegame.game.Player;
-import fr.balsaeize.turtlegame.gui.cmd.GameGUI;
+import fr.balsaeize.turtlegame.game.card.Packet;
 
 /**
  * Classe principale du jeu, c'est ici que se trouve la m�thode principale
@@ -55,7 +55,20 @@ public class TurtleGame {
 	{				
 		/** TODO: Ajouter `equals` et `toString` **/
 		
-		new TurtleGame();
+List<Player> players = new ArrayList<Player>();	
+		
+		players.add(new Player("Balsakup", 19));
+		players.add(new Player("BalsaGirl", 18));
+		players.add(new Player("MrAEize", 20));
+		players.add(new Player("Benjamin", 10));
+		players.add(new Player("Yolo", 99));
+		
+		Packet packet = new Packet();
+		
+		packet.initTile();
+		packet.distributeTile(players);
+		
+		//new TurtleGame();
 	}
 
 }
