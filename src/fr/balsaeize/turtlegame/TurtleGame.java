@@ -55,7 +55,7 @@ public class TurtleGame {
 	{				
 		/** TODO: Ajouter `equals` et `toString` **/
 		
-List<Player> players = new ArrayList<Player>();	
+		/*List<Player> players = new ArrayList<Player>();	
 		
 		players.add(new Player("Balsakup", 19));
 		players.add(new Player("BalsaGirl", 18));
@@ -65,7 +65,7 @@ List<Player> players = new ArrayList<Player>();
 		
 		Packet packet = new Packet();
 		
-		packet.initCard();
+		packet.initCard();*/
 		
 		//new TurtleGame();
 	}
