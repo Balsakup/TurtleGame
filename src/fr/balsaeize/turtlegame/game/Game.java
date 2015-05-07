@@ -1,9 +1,13 @@
 package fr.balsaeize.turtlegame.game;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
+import fr.balsaeize.turtlegame.util.Util;
 
 /**
- * Classe qui gère le déroulement du jeu
+ * Classe qui gï¿½re le dï¿½roulement du jeu
  * 
  * @author Quentin CATHERINE et Axel ELAIN
  * @verison 1.0.0
@@ -14,44 +18,114 @@ public class Game {
 	private List<Player> players;
 	/** Joueur courant. Celui qui doit joueur **/
 	private Player currentPlayer;
+	/** Plateau du jeu sous forme de liste **/
+	private ArrayList<Player> platform;
 
 	/**
-	 * Permet de créer une nouvelle partie de jeu
+	 * Permet de crï¿½er une nouvelle partie de jeu
 	 * 
 	 * @param players Joueurs participant au jeu
 	 */
 	public Game(List<Player> players)
 	{
 		this.players  = players;
-		currentPlayer = getYoungest(); // Récupère le joueur le plus jeune
+		currentPlayer = getYoungest(); // Rï¿½cupï¿½re le joueur le plus jeune
+		platform = new ArrayList<Player>();
 	}
 	
 	/**
-	 * Permet de récupérer le joueur le plus jeune parmis tous les joueurs
+	 * Permet de rï¿½cupï¿½rer le joueur le plus jeune parmis tous les joueurs
 	 * 
 	 * @return Le joueur le plus jeune
 	 */
 	public Player getYoungest()
 	{
 		int age         = 200;  // On suppose qu'il n'y aura pas de joueur de plus de 200 ans
-		Player youngest = null; // Il n'y a pas de plus jeune au début
+		Player youngest = null; // Il n'y a pas de plus jeune au dï¿½but
 		
-		// Pour tous les joueurs présent
+		// Pour tous les joueurs prï¿½sent
 		for (Player p : players)
 		{
-			// Si l'age du joueur est inférieur à l'age du joueur le plus jeune (200 pa défaut)
+			// Si l'age du joueur est infï¿½rieur ï¿½ l'age du joueur le plus jeune (200 pa dï¿½faut)
 			if (p.getAge() < age)
 			{
-				age      = p.getAge(); // L'âge devient celui du joueur le plus jeune
+				age      = p.getAge(); // L'ï¿½ge devient celui du joueur le plus jeune
 				youngest = p;          // On remplace le joueur le plus jeune  
 			}
 		}
 		
 		return youngest; // On retourne le plus jeune
 	}
+	
+	public void initGame()
+	{
+		addPlayer();
+	}
+	
+	public void addPlayer()
+	{
+		Scanner sc     = new Scanner(System.in);
+		String line    = null;
+		String confirm = null;
+		int age        = -1;
+		
+		System.out.println("---------- AJOUTER UN JOUEUR ----------\n");
+		
+		while (line == null)
+		{
+			System.out.print("  >> PrÃ©ciser le nom du joueur : ");
+			
+			line = sc.nextLine();
+			
+			System.out.print("  >> Vous avez choisi " + line + ", cela vous plait ? (Oui ou Non) ");
+			
+			do
+			{
+				confirm = sc.nextLine();
+				
+				switch (confirm.toLowerCase())
+				{
+					case "oui": continue;
+					case "non":
+						line = null;
+						
+						continue;
+					default:
+				}
+			}
+			while (line == null);
+		}
+		
+		while (line == null)
+		{
+			System.out.print("  >> PrÃ©ciser l'Ã¢ge du joueur : ");
+			
+			line = sc.nextLine();
+			
+			System.out.print("  >> Vous avez choisi " + line + ", cela vous plait ? (Oui ou Non) ");
+			
+			do
+			{
+				confirm = sc.nextLine();
+				
+				switch (confirm.toLowerCase())
+				{
+					case "oui": continue;
+					case "non":
+						line = null;
+						
+						continue;
+					default:
+				}
+			}
+			while (line == null);
+		}
+		
+		sc.close();
+	}
 
 	/**
-	 * Permet de récupérer tous les joueurs
+	 * Permet de rï¿½cupï¿½rer tous les joueurs
 	 * 
 	 * @return La liste des joueurs
 	 */
@@ -71,7 +145,7 @@ public class Game {
 	}
 
 	/**
-	 * Permet de récupérer le joueur courant, celui qui doit jouer
+	 * Permet de rï¿½cupï¿½rer le joueur courant, celui qui doit jouer
 	 * 
 	 * @return Le joueur courant
 	 */
@@ -88,6 +162,16 @@ public class Game {
 	public void setCurrentPlayer(Player currentPlayer)
 	{
 		this.currentPlayer = currentPlayer;
+	}
+
+	public ArrayList<Player> getPlatform()
+	{
+		return platform;
+	}
+
+	public void setPlatform(ArrayList<Player> platform)
+	{
+		this.platform = platform;
 	}
 	
 }

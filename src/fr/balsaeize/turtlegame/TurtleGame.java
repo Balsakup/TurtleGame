@@ -1,9 +1,11 @@
 package fr.balsaeize.turtlegame;
 
-import fr.balsaeize.turtlegame.gui.cmd.MenuGUI;
-import fr.balsaeize.turtlegame.gui.cmd.SplashGUI;
-import fr.balsaeize.turtlegame.util.Executor;
-import fr.balsaeize.turtlegame.util.Executor.Command;
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.balsaeize.turtlegame.game.Game;
+import fr.balsaeize.turtlegame.game.Player;
+import fr.balsaeize.turtlegame.gui.cmd.GameGUI;
 
 /**
  * Classe principale du jeu, c'est ici que se trouve la m�thode principale
@@ -23,7 +25,7 @@ public class TurtleGame {
 	{
 		osName = System.getProperty("os.name").toLowerCase();
 		
-		SplashGUI splash = new SplashGUI();
+		/*SplashGUI splash = new SplashGUI();
 		
 		splash.init();
 		splash.render();
@@ -31,7 +33,17 @@ public class TurtleGame {
 		MenuGUI menu = new MenuGUI();
 		
 		menu.init();
-		menu.render();
+		menu.render();*/
+		
+		List<Player> players = new ArrayList<Player>();	
+		
+		players.add(new Player("Balsakup", 19));
+		players.add(new Player("BalsaGirl", 18));
+		players.add(new Player("MrAEize", 20));
+		players.add(new Player("Benjamin", 10));
+		
+		Game game = new Game(players);
+		game.initGame();
 	}
 
 	/**

@@ -3,6 +3,7 @@ package fr.balsaeize.turtlegame.gui.cmd;
 import java.util.Scanner;
 
 import fr.balsaeize.turtlegame.game.Game;
+import fr.balsaeize.turtlegame.game.Player;
 import fr.balsaeize.turtlegame.gui.InterfaceGUI;
 import fr.balsaeize.turtlegame.util.Color;
 import fr.balsaeize.turtlegame.util.Color.ColorCode;
@@ -78,7 +79,21 @@ public class GameGUI implements InterfaceGUI {
 	@Override
 	public void render()
 	{
-		System.out.print(gui.toString());
+		System.out.print("  >>");
+		
+		for (Player p : game.getPlayers())
+		{
+			if (game.getCurrentPlayer().equals(p))
+				System.out.print(" [" + p.getName() + "] ");
+			else
+				System.out.print("  " + p.getName() + "  ");
+		}
+		
+		System.out.println("\n  >>  C'est au tour de " + game.getCurrentPlayer().getName() + " de jouer");
+		
+		//System.out.print(gui.toString());
+		
+		//System.out.println("C'est " + game.getYoungest().getName() + " qui est le/la plus jeune, c'est à lui de commencer.");
 	}
 	
 	public Game getGame()
