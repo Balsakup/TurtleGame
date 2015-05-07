@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import fr.balsaeize.turtlegame.util.Util;
+import fr.balsaeize.turtlegame.util.Color;
+import fr.balsaeize.turtlegame.util.Color.ColorCode;
 
 /**
  * Classe qui g�re le d�roulement du jeu
@@ -67,9 +68,10 @@ public class Game {
 		Scanner sc     = new Scanner(System.in);
 		String line    = null;
 		String confirm = null;
+		String name    = null;
 		int age        = -1;
 		
-		System.out.println("---------- AJOUTER UN JOUEUR ----------\n");
+		System.out.println("  ---------- AJOUTER UN JOUEUR ----------");
 		
 		while (line == null)
 		{
@@ -77,10 +79,10 @@ public class Game {
 			
 			line = sc.nextLine();
 			
-			System.out.print("  >> Vous avez choisi " + line + ", cela vous plait ? (Oui ou Non) ");
-			
 			do
 			{
+				System.out.print("  >> Vous avez choisi " + line + ", cela vous plait ? (Oui ou Non) ");
+				
 				confirm = sc.nextLine();
 				
 				switch (confirm.toLowerCase())
@@ -91,10 +93,14 @@ public class Game {
 						
 						continue;
 					default:
+						confirm = null;
 				}
 			}
-			while (line == null);
+			while (confirm == null);
 		}
+		
+		name = line;
+		line = null;
 		
 		while (line == null)
 		{
@@ -102,10 +108,23 @@ public class Game {
 			
 			line = sc.nextLine();
 			
-			System.out.print("  >> Vous avez choisi " + line + ", cela vous plait ? (Oui ou Non) ");
+			try
+			{
+				age = Integer.parseInt(line);
+			}
+			catch (Exception e)
+			{
+				System.out.println("  >> Vous devez fournir un chiffre !");
+				
+				line = null;
+				
+				continue;
+			}
 			
 			do
 			{
+				System.out.print("  >> Vous avez choisi " + line + ", cela vous plait ? (Oui ou Non) ");
+				
 				confirm = sc.nextLine();
 				
 				switch (confirm.toLowerCase())
@@ -116,12 +135,17 @@ public class Game {
 						
 						continue;
 					default:
+						confirm = null;
 				}
 			}
-			while (line == null);
+			while (confirm == null);
 		}
 		
 		sc.close();
+		
+		System.out.println("\n  >> Le joueur " + name + " (" + age + " ans) a été ajouté au jeu.");
+		
+		players.add(new Player(name, age));
 	}
 
 	/**
