@@ -1,7 +1,7 @@
 package fr.balsaeize.turtlegame.game;
 
 /**
- * Classe qui gère les joueurs, elle permet de créer les joueurs
+ * Classe qui gï¿½re les joueurs, elle permet de crï¿½er les joueurs
  * 
  * @author Quentin CATHERINE et Axel ELAIN
  * @version 1.0.0
@@ -12,9 +12,11 @@ public class Player {
 	private String name;
 	/** Age du joueur **/
 	private int age;
+	/** Sa tortue **/
+	private Turtle turtle;
 	
 	/**
-	 * Permet de créer un nouveau joueur
+	 * Permet de crï¿½er un nouveau joueur
 	 * 
 	 * @param name Nom du joueur
 	 * @param age Age du joueur
@@ -26,7 +28,7 @@ public class Player {
 	}
 
 	/**
-	 * Permet de récupérer le nom du joueur
+	 * Permet de rï¿½cupï¿½rer le nom du joueur
 	 * 
 	 * @return Nom du joueur
 	 */
@@ -46,7 +48,7 @@ public class Player {
 	}
 
 	/**
-	 * Permet de récupérer l'âge du joueur
+	 * Permet de rï¿½cupï¿½rer l'ï¿½ge du joueur
 	 * 
 	 * @return Age du joueur
 	 */
@@ -63,6 +65,16 @@ public class Player {
 	public void setAge(int age)
 	{
 		this.age = age;
+	}
+
+	public Turtle getTurtle()
+	{
+		return turtle;
+	}
+
+	public void setTurtle(Turtle turtle)
+	{
+		this.turtle = turtle;
 	}
 	
 }

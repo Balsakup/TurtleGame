@@ -121,6 +121,15 @@ public class Game {
 				continue;
 			}
 			
+			if (age <= 4 || age >= 100)
+			{
+				System.out.println("  >> Vous devez avoir entre 4 et 100 pour jouer !");
+				
+				line = null;
+				
+				continue;
+			}
+			
 			do
 			{
 				System.out.print("  >> Vous avez choisi " + line + ", cela vous plait ? (Oui ou Non) ");
