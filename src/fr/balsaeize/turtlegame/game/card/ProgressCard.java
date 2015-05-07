@@ -10,7 +10,7 @@ public class ProgressCard extends Card {
 		PLUS(5, 5),
 		MINUS(2, 2),
 		FORWARD_2(0, 2),
-		FORWARD(0, 2);
+		FORWARD(0, 3);
 		
 		private final int nbByColor;
 		private final int nbNeutral;
@@ -34,7 +34,7 @@ public class ProgressCard extends Card {
 		@Override
 		public String toString()
 		{
-			return "nbByColor: " + nbByColor + ", nbNeutral: " + nbNeutral;
+			return "[" + name() + "] nbByColor: " + nbByColor + ", nbNeutral: " + nbNeutral;
 		}
 		
 	}
@@ -45,7 +45,7 @@ public class ProgressCard extends Card {
 	{
 		super(color);
 		
-		setType(null);
+		type = null;
 	}
 	
 	public ProgressCard(ColorCode color, ProgressType type)

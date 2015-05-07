@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import fr.balsaeize.turtlegame.util.Color;
-import fr.balsaeize.turtlegame.util.Color.ColorCode;
-
 /**
  * Classe qui g�re le d�roulement du jeu
  * 
@@ -31,7 +28,7 @@ public class Game {
 	{
 		this.players  = players;
 		currentPlayer = getYoungest(); // R�cup�re le joueur le plus jeune
-		platform = new ArrayList<Player>();
+		platform      = new ArrayList<Player>();
 	}
 	
 	/**

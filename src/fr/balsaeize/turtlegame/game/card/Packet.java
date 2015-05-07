@@ -1,10 +1,10 @@
 package fr.balsaeize.turtlegame.game.card;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import fr.balsaeize.turtlegame.game.Player;
+import fr.balsaeize.turtlegame.game.card.ProgressCard.ProgressType;
 import fr.balsaeize.turtlegame.util.Color.ColorCode;
 
 public class Packet {
@@ -14,8 +14,26 @@ public class Packet {
 
 	public Packet()
 	{
-		setCards(new LinkedList<Card>());
-		setTiles(new ArrayList<Card>());
+		cards = new ArrayList<Card>();
+		tiles = new ArrayList<Card>();
+	}
+	
+	public void initCard()
+	{		
+		for (ProgressType p : ProgressType.values())
+		{
+			for (int i = 0; i < p.getNbByColor(); i++)
+			{
+				cards.add(new ProgressCard(ColorCode.BLUE, p));
+				cards.add(new ProgressCard(ColorCode.YELLOW, p));
+				cards.add(new ProgressCard(ColorCode.RED, p));
+				cards.add(new ProgressCard(ColorCode.GREEN, p));
+				cards.add(new ProgressCard(ColorCode.MAGENTA, p));
+			}
+			
+			for (int i = 0; i < p.getNbNeutral(); i++)
+				cards.add(new ProgressCard(ColorCode.WHITE, p));
+		}
 	}
 	
 	public void initTile()

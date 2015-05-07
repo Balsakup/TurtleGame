@@ -11,8 +11,8 @@ public class Turtle {
 	public Turtle(ColorCode color)
 	{
 		this.color = color;
-		mount = null;
-		rider = null;
+		mount      = null;
+		rider      = null;
 	}
 
 	public ColorCode getColor()

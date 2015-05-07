@@ -65,8 +65,7 @@ List<Player> players = new ArrayList<Player>();
 		
 		Packet packet = new Packet();
 		
-		packet.initTile();
-		packet.distributeTile(players);
+		packet.initCard();
 		
 		//new TurtleGame();
 	}
