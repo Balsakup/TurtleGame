@@ -5,8 +5,15 @@ import fr.balsaeize.turtlegame.util.Executor;
 import fr.balsaeize.turtlegame.util.Executor.Command;
 import fr.balsaeize.turtlegame.util.Util;
 
+/**
+ * Permet d'affichier le splash screen
+ * 
+ * @author Quentin CATHERINE et Axel ELAIN
+ * @version 1.0.0
+ */
 public class SplashGUI implements InterfaceGUI {
 
+	/** Texte du logo **/
 	private StringBuilder logo;
 	
 	@Override
@@ -25,18 +32,28 @@ public class SplashGUI implements InterfaceGUI {
 	@Override
 	public void render()
 	{
-		System.out.println(logo.toString());
+		System.out.println(logo.toString()); // On affiche le logo
 		
-		Util.sleep(1);
+		Util.sleep(1000); // On attend 1 seconde pour le voir
 		
-		Executor.executeCommand(Command.CLEAR_CONSOLE);
+		Executor.executeCommand(Command.CLEAR_CONSOLE); // On nettoie le consoel
 	}
 
+	/**
+	 * Permet de récupérer le logo
+	 * 
+	 * @return Le logo
+	 */
 	public StringBuilder getLogo()
 	{
 		return logo;
 	}
 
+	/**
+	 * Permet de modifier le logo
+	 * 
+	 * @param logo Nouveau logo
+	 */
 	public void setLogo(StringBuilder logo)
 	{
 		this.logo = logo;

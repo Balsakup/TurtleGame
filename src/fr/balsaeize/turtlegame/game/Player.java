@@ -1,9 +1,12 @@
 package fr.balsaeize.turtlegame.game;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import fr.balsaeize.turtlegame.game.card.Card;
 
 /**
- * Classe qui g�re les joueurs, elle permet de cr�er les joueurs
+ * Classe qui gère les joueurs, elle permet de créer les joueurs
  * 
  * @author Quentin CATHERINE et Axel ELAIN
  * @version 1.0.0
@@ -14,8 +17,10 @@ public class Player {
 	private String name;
 	/** Age du joueur **/
 	private int age;
-	/** Sa tuille **/
+	/** Couleur du joueur **/
 	private Card tile;
+	/** Cartes du joueur **/
+	private List<Card> cards;
 	
 	/**
 	 * Permet de cr�er un nouveau joueur
@@ -27,6 +32,7 @@ public class Player {
 	{
 		this.name = name;
 		this.age  = age;
+		cards     = new ArrayList<Card>();
 	}
 
 	/**
@@ -69,14 +75,44 @@ public class Player {
 		this.age = age;
 	}
 
+	/**
+	 * Permet de récupérer la tuille du joueur
+	 * 
+	 * @return Tuille du joueur
+	 */
 	public Card getTile()
 	{
 		return tile;
 	}
 
+	/**
+	 * Permet de changer la tuille du joueur
+	 * 
+	 * @param tile Nouvelle tuile du joueur
+	 */
 	public void setTile(Card tile)
 	{
 		this.tile = tile;
+	}
+
+	/**
+	 * Permet de récupérer les cartes du joueurs
+	 * 
+	 * @return Cartes du joueur
+	 */
+	public List<Card> getCards()
+	{
+		return cards;
+	}
+
+	/**
+	 * Permet de changer les cartes du joueurs
+	 * 
+	 * @param cards Nouvelles carte du joueur
+	 */
+	public void setCards(List<Card> cards)
+	{
+		this.cards = cards;
 	}
 	
 }

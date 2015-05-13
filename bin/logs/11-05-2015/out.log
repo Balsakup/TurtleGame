@@ -1,0 +1,16 @@
+[08:58:42]  >> Technique de mélange utilisee: Riffle
+[08:58:42]  >> Les joueurs inscrits sont :
+[08:58:42]  Nom                  Age   Couleur    Cartes
+[08:58:42]  Charline             56    GREEN      PLUS_2     BLUE      ; PLUS       RED       ; PLUS       MAGENTA   ; PLUS       RED       ; MINUS      BLUE      ;
+[08:58:42]  Christophe           50    MAGENTA    PLUS       YELLOW    ; PLUS       GREEN     ; PLUS       YELLOW    ; MINUS      RED       ; MINUS      MAGENTA   ;
+[08:58:42]  Pierre               7     YELLOW     PLUS       RED       ; PLUS       YELLOW    ; PLUS       WHITE     ; PLUS       BLUE      ; PLUS       YELLOW    ;
+[08:58:42]  Jean                 75    BLUE       PLUS       RED       ; PLUS_2     MAGENTA   ; FORWARD    WHITE     ; PLUS       MAGENTA   ; PLUS       GREEN     ;
+[08:58:42]  Sylvie               19    RED        PLUS       GREEN     ; PLUS       MAGENTA   ; MINUS      WHITE     ; PLUS       GREEN     ; FORWARD_2  WHITE     ;
+[08:59:47]  >> Technique de mélange utilisee: Pile
+[08:59:47]  >> Les joueurs inscrits sont :
+[08:59:47]  Nom                  Age   Couleur    Cartes
+[08:59:47]  Quentin              19    RED        PLUS_2     BLUE      ; PLUS       GREEN     ; PLUS       BLUE      ; PLUS       WHITE     ; PLUS       BLUE      ;
+[08:59:47]  Emilien              53    BLUE       PLUS       YELLOW    ; PLUS_2     GREEN     ; PLUS       WHITE     ; PLUS       GREEN     ; MINUS      YELLOW    ;
+[08:59:47]  Christophe           31    YELLOW     PLUS_2     YELLOW    ; PLUS       MAGENTA   ; PLUS       YELLOW    ; PLUS       WHITE     ; PLUS       YELLOW    ;
+[08:59:47]  Manon                96    MAGENTA    PLUS       RED       ; PLUS_2     MAGENTA   ; PLUS       WHITE     ; PLUS       MAGENTA   ; MINUS      RED       ;
+[08:59:47]  Vincent              66    GREEN      PLUS_2     RED       ; PLUS       WHITE     ; PLUS       RED       ; MINUS      BLUE      ; PLUS       RED       ;

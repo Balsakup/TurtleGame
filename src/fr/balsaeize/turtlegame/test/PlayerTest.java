@@ -23,7 +23,7 @@ public class PlayerTest {
 		players.add(new Player("MrAEize", 20));
 		players.add(new Player("Benjamin", 10));
 		
-		Game game = new Game(players);
+		Game game = new Game();
 		
 		System.out.println(game.getCurrentPlayer().getName());
 	}

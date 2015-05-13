@@ -94,6 +94,8 @@ public class Executor {
 			
 			p.waitFor(); // On attend que la commande s'exécute
 			
+			Util.sleep(1);
+			
 			return true; // On retourne Vrai car la commande s'est bien exécutée
 		}
 		catch (IOException | InterruptedException e)
